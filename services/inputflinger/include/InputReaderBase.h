@@ -155,6 +155,9 @@ struct InputReaderConfiguration {
         // Volume keys rotation option changed.
         CHANGE_VOLUME_KEYS_ROTATION = 1 << 10,
 
+        // Swap keys changed.
+        CHANGE_SWAP_KEYS = 1 << 20,
+
         // All devices must be reopened.
         CHANGE_MUST_REOPEN = 1 << 31,
     };
@@ -259,6 +262,9 @@ struct InputReaderConfiguration {
     // 0 - disabled, 1 - phone or hybrid rotation mode, 2 - tablet rotation mode
     int volumeKeysRotationMode;
 
+    // Swap back with recents button
+    bool swapKeys;
+
     InputReaderConfiguration() :
             virtualKeyQuietTime(0),
             pointerVelocityControlParameters(1.0f, 500.0f, 3000.0f, 3.0f),
@@ -276,7 +282,8 @@ struct InputReaderConfiguration {
             pointerGestureMovementSpeedRatio(0.8f),
             pointerGestureZoomSpeedRatio(0.3f),
             showTouches(false), pointerCapture(false),
-            volumeKeysRotationMode(0) { }
+            volumeKeysRotationMode(0) { },
+            swapKeys(false) { }
 
     static std::string changesToString(uint32_t changes);
 
