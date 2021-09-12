@@ -56,8 +56,6 @@ private:
     int32_t mKeyboardType;
     bool mSwapKeys; // swap back with recents button
 
-    int32_t mRotationMapOffset; // determines if and how volume keys rotate
-
     std::vector<KeyDown> mKeyDowns; // keys that are down
     int32_t mMetaState;
     nsecs_t mDownTime; // time of most recent key down
