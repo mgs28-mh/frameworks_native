@@ -26,7 +26,7 @@
 #include <binder/IInterface.h>
 #include <gui/FrameTimelineInfo.h>
 #include <gui/ITransactionCompletedListener.h>
-#include <input/Flags.h>
+#include "Flags.h"
 #include <math/vec4.h>
 #include <stdint.h>
 #include <sys/types.h>
